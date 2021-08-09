@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7cbf10dcc9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.jpeg" alt="OK Farms logo" width="100px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a class="nav-links" href="our-story.html">Our Story</a></li>
+                    <li><a class="nav-links" href="the-farm.html">The Farm</a></li>
+                    <li><a class="nav-links" href="the-food.html">The Food</a></li>
+                    <li><a class="nav-links" href="community.html">Community Vision</a></li>
+                    <li><a href="contact.html"><button class="contact">Contact</button></a></li>
+                </ul>
+                <a href="https://www.facebook.com/OK-Farm-Life-107411578174460/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/okfarmlife/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </nav>
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">   
+        </div>
+    </header>
+
+    
+
+    <section class="welcome-section">
+        <div class="container">
+        <div class="row">
+            <div class="col-2 our-story">
+            <h2>Let's Connect</h2>
+            <p>Glad you stopped by - Please fill out this form with your questions or comments and we'll be in touch with you shortly. Thanks!</p>
+            </div>
+            <div class="col-2 our-story">
+                <section class="contact-form">
+                <div class="form-container">
+                    <form action="https://formspree.io/f/mzbyjaey" method="POST" id="my-form">
+        
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                        </div>
+        
+                        <button type="submit" class="submit-btn" >Submit</button>
+        
+                    </form>
+                </div>
+                <div id="status"></div>
+            </section>
+
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <ul>
+                    <li><a class="nav-links" href="index.html">Home</a></li>
+                    <li><a class="nav-links" href="our-story.html">Our Story</a></li>
+                    <li><a class="nav-links" href="community.html">Community Vision</a></li>
+                    <li><a class="nav-links" href="contact.html">Contact</a></li>
+                </ul>
+                <p>OK Farms, Street Address, Ramona, CA 92065</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else
+            {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <script src="main.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/7cbf10dcc9.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>OK Farms</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.jpeg" alt="OK Farms logo" width="100px"></a>
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a class="nav-links" href="our-story.html">Our Story</a></li>
+                    <li><a class="nav-links" href="the-farm.html">The Farm</a></li>
+                    <li><a class="nav-links" href="the-food.html">The Food</a></li>
+                    <li><a class="nav-links" href="community.html">Community Vision</a></li>
+                    <li><a href="contact.html"><button class="contact">Contact</button></a></li>
+                </ul>
+                <a href="https://www.facebook.com/OK-Farm-Life-107411578174460/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/okfarmlife/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </nav>  
+            <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+    <div class="row">
+        <div class="col-1">
+            <!--Start slider-->
+            <div class="slider">
+                <div class="slides">
+        <!-- radio buttons-->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <input type="radio" name="radio-btn" id="radio5">
+        <!-- slides images start-->
+                    <div class="slide first">
+                        <img src="images/living-room.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="images/orange-tree.jpg" alt="">
+                    </div>
+                    <div class="slide three">
+                        <img src="images/lemon-bucket.jpeg" alt="">
+                    </div>
+                    <div class="slide four">
+                        <img src="images/squash.jpeg" alt="">
+                    </div>
+                    <div class="slide five">
+                        <img src="images/tomatoes.jpeg" alt="">
+                    </div>
+        <!-- automatic navigation start-->
+                    <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                        <div class="auto-btn4"></div>
+                        <div class="auto-btn5"></div>
+                    </div>
+        <!-- manual navigation start-->
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                        <label for="radio5" class="manual-btn"></label>
+                </div>
+                </div>
+            </div>
+
+            <!--End slider-->
+
+            <!--
+            <img id="farm-life" alt="view of the farm" src="images/living-room.jpg">-->
+        </div>
+    </div>
+    </header>
+
+    
+
+    <section class="welcome-section">
+        <div class="container">
+        <div class="row">
+            <div class="col-2">
+            <h2>Welcome to OK Farms!</h2>
+            <p>We are Olivia and Khoa - yours truly - we're a couple of "OK" farmers as we like to say; passionate about community, and figuring out this farming thing as we go along. Here for the journey, we're just taking everything as it comes and learning all there is to know about raising animals and reaping a healthy harvest!</p>
+            <p>Thanks for stopping by! If you're interested in connecting to partner together in some way, feel free to reach out and let's chat more!</p>
+            </div>
+            <div class="col-2">
+                <img src="images/introducing-khoa-olivia.jpeg" alt="">
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="harvest-snapshots">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/olivia-sedona.jpg" alt="goats">
+                </div>
+                <div class="col-4">
+                    <img src="images/building-chicken-coop.jpg" alt="eggs">
+                </div>
+                <div class="col-4">
+                    <img src="images/eggs.jpg" alt="eggs">
+                </div>
+                <div class="col-4">
+                    <img src="images/oranges.jpg" alt="oranges">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <ul>
+                    <li><a class="nav-links" href="index.html">Home</a></li>
+                    <li><a class="nav-links" href="our-story.html">Our Story</a></li>
+                    <li><a class="nav-links" href="community.html">Community Vision</a></li>
+                    <li><a class="nav-links" href="contact.html">Contact</a></li>
+                </ul>
+                <p>OK Farms, Street Address, Ramona, CA 92065</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else
+            {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        var counter = 1;
+        setInterval(function(){
+            document.getElementById('radio' + counter).checked = true;
+            counter++;
+            if(counter > 5){
+                counter = 1;
+            }
+        }, 4000);
+    
+        </script>
+        
+
+</body>
+</html>
